@@ -1,7 +1,7 @@
 #version 150
 
 // AntiAliased Nearest Neighbor
-// by jimbo1qaz and wareya
+// by nyanpasu64 and wareya
 // Licensed MIT
 
 precision highp float;
