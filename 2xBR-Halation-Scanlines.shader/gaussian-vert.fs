@@ -12,7 +12,7 @@ out vec4 fragColor;
 
 #define CRTgamma 2.5
 #define display_gamma 2.2
-#define TEX2D(c) pow(texture2D(source[0],(c)),vec4(CRTgamma))
+#define TEX2D(c) pow(texture(source[0],(c)),vec4(CRTgamma))
 #define BLURFACTOR 1.0
 
 void main()

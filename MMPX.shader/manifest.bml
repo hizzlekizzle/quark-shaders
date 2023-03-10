@@ -1,0 +1,12 @@
+input
+  filter: nearest
+
+program
+  filter: nearest
+  vertex: mmpx.vs
+  fragment: mmpx.fs
+  height: 100%
+  width: 100%
+  
+output
+  filter: linear

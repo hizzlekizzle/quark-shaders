@@ -12,12 +12,12 @@ out vec4 fragColor;
 
 void main() {
 vec4 ps = 1.0 / sourceSize[0];
-vec4 l = texture2D(source[0], vec2(texCoord.x - ps.x, texCoord.y));
-vec4 r = texture2D(source[0], texCoord);
+vec4 l = texture(source[0], vec2(texCoord.x - ps.x, texCoord.y));
+vec4 r = texture(source[0], texCoord);
 if(sourceSize[0].x > 256) fragColor = mix(l, r, 0.5);
 
 else
 
-fragColor = texture2D(source[0], texCoord);
+fragColor = texture(source[0], texCoord);
 
 }

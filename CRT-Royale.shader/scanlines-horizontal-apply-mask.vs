@@ -94,9 +94,9 @@ uniform int phase;
 #define HALATION_BLURtexture_size sourceSize[1].xy
 #define HALATION_BLURvideo_size sourceSize[1].xy
 #ifdef INTEGRATED_GRAPHICS_COMPATIBILITY_MODE
-	#define MASK_RESIZEtexture source[0]
+#define MASK_RESIZEtexture source[0]
 #else
-	#define MASK_RESIZEtexture source[0]
+#define MASK_RESIZEtexture source[0]
 #endif
 #define MASK_RESIZEtexture_size sourceSize[0].xy
 #define MASK_RESIZEvideo_size sourceSize[0].xy
@@ -136,15 +136,15 @@ uniform int phase;
 #define input_texture source[0]
 
 #if defined(GL_ES)
-	#define COMPAT_PRECISION mediump
+#define COMPAT_PRECISION mediump
 #else
-	#define COMPAT_PRECISION
+#define COMPAT_PRECISION
 #endif
 
 #if __VERSION__ >= 130
-	#define COMPAT_TEXTURE texture
+#define COMPAT_TEXTURE texture
 #else
-	#define COMPAT_TEXTURE texture2D
+#define COMPAT_TEXTURE texture2D
 #endif
 
 // VERTEX INCLUDES //

@@ -50,7 +50,7 @@ out vec4 fragColor;
 #define STU(x,b) ((d(x,b)+sin(d(x,b))-e(x,b)-sin(e(x,b)))/(2.0*pi))
 
 #define SOURCE(j) vec2(texCoord.x,texCoord.y - Y(j)*sourceSize[0].w)
-#define C(j) (texture2D(source[0], SOURCE(j)).xyz)
+#define C(j) (texture(source[0], SOURCE(j)).xyz)
 
 #ifdef NO_SCANLINES
 #define VAL(j) (C(j)*STU(Y(j),(TV_VERTICAL_RESOLUTION*sourceSize[0].w)))

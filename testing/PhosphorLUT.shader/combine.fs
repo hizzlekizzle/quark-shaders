@@ -12,8 +12,8 @@ out vec4 fragColor;
 
 void main() {
 
-vec4 image = texture2D(source[3], texCoord);
-vec4 previous = texture2D(source[0], texCoord);
+vec4 image = texture(source[3], texCoord);
+vec4 previous = texture(source[0], texCoord);
 
 fragColor = 1.0 - (1.0 - image) * (1.0 - previous);
 }

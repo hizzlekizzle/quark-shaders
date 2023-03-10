@@ -59,33 +59,33 @@ void main() {
    bvec4 edr, px; // px = pixel, edr = edge detection rule
    bvec4 interp_restriction_lv1;
 
-   vec3 A1 = texture2D(source[0], vertexIn.t1.xw).rgb;
-   vec3 B1 = texture2D(source[0], vertexIn.t1.yw).rgb;
-   vec3 C1 = texture2D(source[0], vertexIn.t1.zw).rgb;
+   vec3 A1 = texture(source[0], vertexIn.t1.xw).rgb;
+   vec3 B1 = texture(source[0], vertexIn.t1.yw).rgb;
+   vec3 C1 = texture(source[0], vertexIn.t1.zw).rgb;
 
-   vec3 A  = texture2D(source[0], vertexIn.t2.xw).rgb;
-   vec3 B  = texture2D(source[0], vertexIn.t2.yw).rgb;
-   vec3 C  = texture2D(source[0], vertexIn.t2.zw).rgb;
+   vec3 A  = texture(source[0], vertexIn.t2.xw).rgb;
+   vec3 B  = texture(source[0], vertexIn.t2.yw).rgb;
+   vec3 C  = texture(source[0], vertexIn.t2.zw).rgb;
 
-   vec3 D  = texture2D(source[0], vertexIn.t3.xw).rgb;
-   vec3 E  = texture2D(source[0], vertexIn.t3.yw).rgb;
-   vec3 F  = texture2D(source[0], vertexIn.t3.zw).rgb;
+   vec3 D  = texture(source[0], vertexIn.t3.xw).rgb;
+   vec3 E  = texture(source[0], vertexIn.t3.yw).rgb;
+   vec3 F  = texture(source[0], vertexIn.t3.zw).rgb;
 
-   vec3 G  = texture2D(source[0], vertexIn.t4.xw).rgb;
-   vec3 H  = texture2D(source[0], vertexIn.t4.yw).rgb;
-   vec3 I  = texture2D(source[0], vertexIn.t4.zw).rgb;
+   vec3 G  = texture(source[0], vertexIn.t4.xw).rgb;
+   vec3 H  = texture(source[0], vertexIn.t4.yw).rgb;
+   vec3 I  = texture(source[0], vertexIn.t4.zw).rgb;
 
-   vec3 G5 = texture2D(source[0], vertexIn.t5.xw).rgb;
-   vec3 H5 = texture2D(source[0], vertexIn.t5.yw).rgb;
-   vec3 I5 = texture2D(source[0], vertexIn.t5.zw).rgb;
+   vec3 G5 = texture(source[0], vertexIn.t5.xw).rgb;
+   vec3 H5 = texture(source[0], vertexIn.t5.yw).rgb;
+   vec3 I5 = texture(source[0], vertexIn.t5.zw).rgb;
 
-   vec3 A0 = texture2D(source[0], vertexIn.t6.xy).rgb;
-   vec3 D0 = texture2D(source[0], vertexIn.t6.xz).rgb;
-   vec3 G0 = texture2D(source[0], vertexIn.t6.xw).rgb;
+   vec3 A0 = texture(source[0], vertexIn.t6.xy).rgb;
+   vec3 D0 = texture(source[0], vertexIn.t6.xz).rgb;
+   vec3 G0 = texture(source[0], vertexIn.t6.xw).rgb;
 
-   vec3 C4 = texture2D(source[0], vertexIn.t7.xy).rgb;
-   vec3 F4 = texture2D(source[0], vertexIn.t7.xz).rgb;
-   vec3 I4 = texture2D(source[0], vertexIn.t7.xw).rgb;
+   vec3 C4 = texture(source[0], vertexIn.t7.xy).rgb;
+   vec3 F4 = texture(source[0], vertexIn.t7.xz).rgb;
+   vec3 I4 = texture(source[0], vertexIn.t7.xw).rgb;
 
    vec4 bdhf = yuv_weighted[0]*mat4x3( B,  D,  H,  F);
    vec4 cagi = yuv_weighted[0]*mat4x3( C,  A,  G,  I);
