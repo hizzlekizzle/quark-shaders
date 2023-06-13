@@ -60,6 +60,4 @@ mat4 adjust = mat4((1.0 - sat) * 0.3086 + sat, (1.0 - sat) * 0.3086, (1.0 - sat)
 	screen = clamp(screen * lum, 0.0, 1.0);
 	screen = color * screen;
 	FragColor = pow(screen, vec4(1.0 / (display_gamma)));
-   vec2 test = sourceSize[0].xy;
-   FragColor = texture(source[0], vTexCoord);
 }
