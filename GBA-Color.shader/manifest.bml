@@ -1,0 +1,10 @@
+input
+  filter: nearest
+
+program
+  filter: nearest
+  vertex: stock.vs
+  fragment: gba-color.fs
+  
+output
+  filter: linear
