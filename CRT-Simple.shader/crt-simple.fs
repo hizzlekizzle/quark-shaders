@@ -29,7 +29,7 @@ out vec4 fragColor;
         #define outputGamma 2.2
 
         // Macros.
-        #define TEX2D(c) pow(texture2D(source[0], (c)), vec4(inputGamma))
+        #define TEX2D(c) pow(texture(source[0], (c)), vec4(inputGamma))
         #define PI 3.141592653589
 
         // Apply radial distortion to the given coordinate.

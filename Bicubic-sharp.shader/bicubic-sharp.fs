@@ -48,7 +48,7 @@ in Vertex {
 
 	vec3 pixel(float xpos, float ypos)
 	{
-	    return texture2D(source[0], vec2(xpos, ypos)).rgb;
+	    return texture(source[0], vec2(xpos, ypos)).rgb;
 	}
 
 	vec3 line(float ypos, vec4 xpos, vec4 linetaps)

@@ -97,15 +97,15 @@ out vec4 FragColor;
 #define input_texture source[0]
 
 #if defined(GL_ES)
-	#define COMPAT_PRECISION mediump
+#define COMPAT_PRECISION mediump
 #else
-	#define COMPAT_PRECISION
+#define COMPAT_PRECISION
 #endif
 
 #if __VERSION__ >= 130
-	#define COMPAT_TEXTURE texture
+#define COMPAT_TEXTURE texture
 #else
-	#define COMPAT_TEXTURE texture2D
+#define COMPAT_TEXTURE texture2D
 #endif
 
 //////////////////////////////////  INCLUDES  //////////////////////////////////

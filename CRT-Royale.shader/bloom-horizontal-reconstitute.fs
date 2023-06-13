@@ -135,15 +135,15 @@ out vec4 FragColor;
 #define BRIGHTPASSvideo_size sourceSize[1].xy
 
 #if defined(GL_ES)
-	#define COMPAT_PRECISION mediump
+#define COMPAT_PRECISION mediump
 #else
-	#define COMPAT_PRECISION
+#define COMPAT_PRECISION
 #endif
 
 #if __VERSION__ >= 130
-	#define COMPAT_TEXTURE texture
+#define COMPAT_TEXTURE texture
 #else
-	#define COMPAT_TEXTURE texture2D
+#define COMPAT_TEXTURE texture2D
 #endif
 
 /////////////////////////////  SETTINGS MANAGEMENT  ////////////////////////////

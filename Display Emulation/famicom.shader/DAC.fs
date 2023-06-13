@@ -53,7 +53,7 @@ float NTSCsignal(int emphasis, int level, int color, int p)
 
 
 void main() {
-	vec4 c=texture2D(source[0], texCoord.xy);
+	vec4 c=texture(source[0], texCoord.xy);
 	
 	int emphasis = TO_INT3(c.x);
 	int level    = TO_INT2(c.y);

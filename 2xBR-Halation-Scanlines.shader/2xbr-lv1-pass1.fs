@@ -38,12 +38,12 @@ void main() {
    vec2 g1  = dir*vertexIn.t1.xy;
    vec2 g2  = dir*vertexIn.t1.zw;
 
-   vec3 F   = texture2D(source[1], vertexIn.texCoord +g1).rgb;
-   vec3 H   = texture2D(source[1], vertexIn.texCoord +g2).rgb;
-   vec3 E   = texture2D(source[1], vertexIn.texCoord    ).rgb;
+   vec3 F   = texture(source[1], vertexIn.texCoord +g1).rgb;
+   vec3 H   = texture(source[1], vertexIn.texCoord +g2).rgb;
+   vec3 E   = texture(source[1], vertexIn.texCoord    ).rgb;
 
    vec4 icomp = round(clamp(dir*sym_vectors, vec4(0.0), vec4(1.0))); // choose info component
-   float  info  = remapFrom01(dot(texture2D(source[0], vertexIn.texCoord), icomp), 255.0f); // retrieve 1st pass info
+   float  info  = remapFrom01(dot(texture(source[0], vertexIn.texCoord), icomp), 255.0f); // retrieve 1st pass info
    vec2 flags = unpack_info(info); // retrieve 1st pass flags
 
    edr = flags.x;

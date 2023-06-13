@@ -1,0 +1,18 @@
+input
+  filter: nearest
+  
+program
+  fragment: downsample.fs
+  filter: nearest
+  height: 50%
+  width: 50%
+
+program
+  filter: nearest
+  vertex: mmpx.vs
+  fragment: mmpx.fs
+  
+output
+  filter: linear
+  height: 100%
+  width: 100%

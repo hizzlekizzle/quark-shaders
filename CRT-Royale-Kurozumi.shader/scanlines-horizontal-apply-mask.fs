@@ -97,9 +97,9 @@ out vec4 FragColor;
 #define HALATION_BLURtexture_size sourceSize[2].xy
 #define HALATION_BLURvideo_size sourceSize[2].xy
 #ifdef INTEGRATED_GRAPHICS_COMPATIBILITY_MODE
-	#define MASK_RESIZEtexture source[0]
+#define MASK_RESIZEtexture source[0]
 #else
-	#define MASK_RESIZEtexture source[0]
+#define MASK_RESIZEtexture source[0]
 #endif
 #define MASK_RESIZEtexture_size sourceSize[0]
 #define MASK_RESIZEvideo_size sourceSize[0]
@@ -145,15 +145,15 @@ const float max_viewport_size_x = 1080.0*1024.0*(4.0/3.0);
 #define input_texture source[0]
 
 #if defined(GL_ES)
-	#define COMPAT_PRECISION mediump
+#define COMPAT_PRECISION mediump
 #else
-	#define COMPAT_PRECISION
+#define COMPAT_PRECISION
 #endif
 
 #if __VERSION__ >= 130
-	#define COMPAT_TEXTURE texture
+#define COMPAT_TEXTURE texture
 #else
-	#define COMPAT_TEXTURE texture2D
+#define COMPAT_TEXTURE texture2D
 #endif
 
 // VERTEX INCLUDES //
@@ -10768,12 +10768,12 @@ void main() {
         //  3.) The inaccurate blurring hurts quality in high-contrast areas.
         //  4.) The bloom_underestimate_levels parameter seems less sensitive.
         //  Reverse the auto-dimming and amplify to compensate for mask dimming:
-		#define PHOSPHOR_BLOOM_FAKE_WITH_SIMPLE_BLEND
-        #ifdef PHOSPHOR_BLOOM_FAKE_WITH_SIMPLE_BLEND
+#define PHOSPHOR_BLOOM_FAKE_WITH_SIMPLE_BLEND
+#ifdef PHOSPHOR_BLOOM_FAKE_WITH_SIMPLE_BLEND
             static const float blur_contrast = 1.05;
-        #else
+#else
             static const float blur_contrast = 1.0;
-        #endif
+#endif
         const float mask_amplify = get_mask_amplify();
         const float undim_factor = 1.0/auto_dim_factor;
         const float3 phosphor_emission =

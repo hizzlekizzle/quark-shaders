@@ -23,7 +23,7 @@ out vec4 fragColor;
 #define TO_4_BIT(X) floor(((X)*15.0)+0.5)
 
 void main() {
-	vec4 c=texture2D(source[0], texCoord.xy);
+	vec4 c=texture(source[0], texCoord.xy);
 	c.r=TO_5_BIT(c.r);
 	c.g=TO_5_BIT(c.g);
 	c.b=TO_5_BIT(c.b);

@@ -41,7 +41,7 @@ out vec4 fragColor;
 
 
 void main() {
-	vec3 c=texture2D(source[0], texCoord.xy).xyz;
+	vec3 c=texture(source[0], texCoord.xy).xyz;
 #ifdef TV_COLOR_LEVELS
 	c=LEVELS(c);
 #endif 	
