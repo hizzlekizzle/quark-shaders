@@ -31,7 +31,6 @@
 #define SCANLINE_WIDTH (1.5*sourceSize[0].y/TV_VERTICAL_RESOLUTION)
 
 uniform sampler2D	source[];
-uniform sampler2D 	texture[];
 uniform vec4		sourceSize[];
 
 in Vertex {
