@@ -1,0 +1,9 @@
+input
+  filter: linear
+
+program
+  filter: linear
+  fragment: MattiasCRT.fs
+  
+output
+  filter: linear
