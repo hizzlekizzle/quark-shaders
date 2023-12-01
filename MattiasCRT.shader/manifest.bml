@@ -2,7 +2,7 @@ input
   filter: linear
 
 program
-  filter: nearest
+  filter: linear
   fragment: MattiasCRT.fs
   
 output

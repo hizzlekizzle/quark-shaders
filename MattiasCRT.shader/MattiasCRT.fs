@@ -22,7 +22,7 @@ uniform int phase;
 //////// user settings /////////
 
 // wiggle makes the screen wiggle
-#define wiggle
+//#define wiggle
 
 // roll makes the scanlines roll
 #define roll
